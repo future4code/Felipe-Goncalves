@@ -1,0 +1,40 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: #ccc;
+}
+
+h1 {
+  color: #126;
+  font-size: 34px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.logo {
+  width: auto;
+  margin-bottom: 50px;
+  padding: 24px;
+  border-radius: 150px;
+}
+
+.hover:hover {
+  color: red;
+}
+
+div img {
+  width: 50px;
+  margin: 5px;
+}
+
+footer {
+  background: royalblue;
+  margin-bottom: 0px;
+}
