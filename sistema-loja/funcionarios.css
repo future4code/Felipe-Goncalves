@@ -1,0 +1,31 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #ccc;
+  }
+  
+  h1 {
+    color: #126;
+    font-size: 34px;
+  }
+
+  h2{
+      color: #126;
+  }
+  
+  a {
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+
+  .hover:hover {
+    color: red;
+  }
+  
+  ul li{
+      list-style: none;
+      font-size: 20px;
+      
+  }
+ 
+  
