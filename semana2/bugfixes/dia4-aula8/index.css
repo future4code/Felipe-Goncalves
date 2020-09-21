@@ -81,6 +81,7 @@ div > p:first-child {
 }
 
 #container-de-descricao > ol {
+  list-style-position: inside;  
   padding: 15px 0px;
   margin-top: 15px;
 }
@@ -108,7 +109,7 @@ div:last-child {
 }
 
 table {
-    margin: 0 auto;
+  margin: 0 auto;
   width: 100%;
   text-align: center;
 }
