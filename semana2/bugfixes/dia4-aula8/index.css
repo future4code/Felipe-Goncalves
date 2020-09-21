@@ -24,6 +24,7 @@ input {
   border: 0.1px;
   height: 20px;
   width: 500px;
+  outline: none;
 }
 
 button:focus {
@@ -52,6 +53,7 @@ div > p:first-child {
   position: absolute;
   top: 300px;
   right: 550px;
+  outline: none;
 }
 
 .botao-amarelo:hover {
