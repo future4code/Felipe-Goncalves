@@ -11,7 +11,7 @@
 
 h2 {
     background-color: #fe7e02;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;    
     color: white;
     text-align: center;
 }
@@ -41,10 +41,12 @@ div img {
     background-color: #ffaf43;
     width: 250px;
     height: 40px;
-    margin-top: 150px;
     border-radius: 5px;
     font-size: 20px;
     color: white;
+    position: absolute;
+    top: 300px;
+    right: 550px;
 }
 
 .botao-amarelo:hover {
@@ -53,7 +55,7 @@ div img {
 
 .container {
     height: 500px;
-    text-align: center;
+    text-align: center;    
 }
 
 .icone {
@@ -70,20 +72,25 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    
+
 }
 
-#container-de-descricao>ol {
-    padding: 15px 0px;
+#container-de-descricao>ol  {
+    padding: 15px 0px;   
+    
 }
 
 #container-para-comprar {
-    background-color: #e7eb90;
+    background-color: #e7eb90;    
+    position: relative;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
-    font-size: 60px;
+    font-size: 60px; 
+
 }
 
 
