@@ -74,6 +74,20 @@ footer {
 
 @media screen and (max-width: 420px){
 
+    .logo {
+        height: 13vh;
+      }
+
+      .p-sobreNos{
+        margin-top: 2em;
+          
+      }
+
+    .atc-sobreNos{
+        text-align: left;
+        letter-spacing: 0.2em;
+    }
+
     #vitrine{
         display: grid;
         justify-content: center;
