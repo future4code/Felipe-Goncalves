@@ -7,31 +7,47 @@
     
 }
 
-body{
-    margin-left: 2em;
+body{    
+    margin-left: 1em;
     font-family: 'Courier New', Courier, monospace;
     background:rgb(222, 222, 226);
 }
 
-header{
-
+header{  
+    
     
 }
 
 .logo{
-    height: 20vh;    
+    height: 12vh;    
 }
 
-nav{
+nav{      
     background: white;
+    display: flex;
+    justify-content: space-between;
+
    
   
 }
 
 ul{
     
+    display: flex;
     margin-left: 3em;
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+
+
+.img-vitrine{
+    height: 25vh;
+    width: 35vw;
 }
 
 footer{
