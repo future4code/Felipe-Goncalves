@@ -43,7 +43,7 @@ a {
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: ;
+  
 }
 
 .vitrine1{
@@ -58,8 +58,8 @@ a {
 
 
 .img-vitrine {
-  height: 40vh;
-  width: 45vw;
+  height: 45vh;
+  width: 35vw;
 }
 
 footer {
@@ -70,4 +70,20 @@ footer {
     width: 5vw;
     height: 10vh;
     border-radius: 1em;
+}
+
+@media screen and (max-width: 420px){
+
+    #vitrine{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .img-vitrine {
+        height: 20vh;
+        width: 30vh;
+      }
 }
