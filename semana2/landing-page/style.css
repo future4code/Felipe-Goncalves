@@ -1,0 +1,40 @@
+
+/* Style Geral */
+*{
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    margin-left: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    background:rgb(222, 222, 226);
+}
+
+header{
+
+    
+}
+
+.logo{
+    height: 20vh;    
+}
+
+nav{
+    background: white;
+   
+  
+}
+
+ul{
+    
+    margin-left: 3em;
+    list-style: none;
+}
+
+footer{
+    
+    background:rgb(164, 164, 175);
+}
