@@ -32,10 +32,6 @@ a {
   text-decoration: none;
 }
 
-#sobreNos{
-
-}
-
 .atc-sobreNos{
     text-align: center;
     letter-spacing: 0.2em;
@@ -56,6 +52,9 @@ a {
     text-align: center;
 }
 
+.paragrafo-imagem{
+    font-size: 0.5em;
+}
 
 
 .img-vitrine {
