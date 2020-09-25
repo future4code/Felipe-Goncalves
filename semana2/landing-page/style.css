@@ -32,6 +32,15 @@ a {
   text-decoration: none;
 }
 
+#sobreNos{
+
+}
+
+.atc-sobreNos{
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
 #vitrine {
   display: grid;
   grid-template-columns: 1fr 1fr;
