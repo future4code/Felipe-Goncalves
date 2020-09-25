@@ -43,18 +43,32 @@ a {
 
 #vitrine {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: ;
 }
 
+.vitrine1{
+    font-size: 2em;
+    margin-top: 3em;
+    text-align: center;
+}
+
 
 
 .img-vitrine {
-  height: 10vh;
-  width: 25vw;
+  height: 40vh;
+  width: 45vw;
 }
 
 footer {
   background: rgb(164, 164, 175);
+}
+
+.icon{
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1em;
 }
