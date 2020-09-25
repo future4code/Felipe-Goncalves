@@ -1,53 +1,51 @@
-
 /* Style Geral */
-*{
-    
-    margin: 0.2em;
-    padding: 0;
-    
+* {
+  margin: 0.2em;
+  padding: 0;
 }
 
-body{    
-    
-    font-family: 'Courier New', Courier, monospace;
-    background:rgb(222, 222, 226);
+body {
+
+  font-family: "Courier New", Courier, monospace;
+  background: rgb(222, 222, 226);
 }
 
-.logo{
-    height: 20vh;    
+.logo {
+  height: 20vh;
 }
 
-nav{     
-    
-    background:rgb(222, 222, 226);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-   
-  
+nav {
+  background: rgb(222, 222, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-ul{    
-    
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: flex-start;
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-a{
-    
-    text-decoration: none;
-
+a {
+  text-decoration: none;
 }
 
-.img-vitrine{
-    height: 25vh;
-    width: 35vw;
+#vitrine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: ;
 }
 
-footer{
-    
-    background:rgb(164, 164, 175);
+
+
+.img-vitrine {
+  height: 10vh;
+  width: 25vw;
+}
+
+footer {
+  background: rgb(164, 164, 175);
 }
