@@ -40,16 +40,17 @@
 
 // EXERCICIO 3
 
+// let arraylistaDeTarefas = [];
 // let tarefa1 = prompt("Site uma tarefa que precise realizar!");
 // let tarefa2 = prompt("Site outra tarefa que precise realizar!");
 // let tarefa3 = prompt("Site outra tarefa que precise realizar!");
-// let listaDeTarefas = [];
-// listaDeTarefas.push(tarefa1, tarefa2, tarefa3);
-// // console.log(listaDeTarefas);
+// arraylistaDeTarefas.push(tarefa1, tarefa2, tarefa3);
+// console.log(arraylistaDeTarefas);
 
 // let indiceTarefas = prompt("Digite o indice de uma tarefa 0, 1 ou 2!");
-// listaDeTarefas.splice(indiceTarefas, 1);
-// console.log(listaDeTarefas);
+// indiceTarefas = Number(indiceTarefas);
+// arraylistaDeTarefas.splice(indiceTarefas, 1);
+// console.log(arraylistaDeTarefas);
 
 // Exercicio 4
 
@@ -77,23 +78,23 @@
 
 // c.
 
-// let f3 = (0)*9/5 + 32;
-// let c3 = 30;
-// let resultado3 = (c3)*9/5 + 32;
-// console.log(resultado3 + "F");
+let f3 = (0)*9/5 + 32;
+let c3 = 30;
+let resultado3 = (c3)*9/5 + 32;
+console.log(resultado3 + "F");
 
-// let k3 = ( - 32)*5/9 + 273.15;
-// let resultado4 = (c3 - 32)*5/9 + 273.15;
-// console.log(resultado4 + "k");
+let k3 = ( - 32)*5/9 + 273.15;
+let resultado4 = (c3 - 32)*5/9 + 273.15;
+console.log(resultado4 + "k");
 
-// // d.
-// let valor = prompt("Valor em Celsius que deseja converter");
-// valor = Number(valor);
-// f3 = (valor)*9/5 + 32;
-// console.log(f3 + "F");
+// d.
+let valor = prompt("Valor em Celsius que deseja converter");
+valor = Number(valor);
+f3 = (valor)*9/5 + 32;
+console.log(f3 + "F");
 
-// k3 = (valor - 32)*5/9 + 273.15;
-// console.log(k3 + "K");
+k3 = (valor - 32)*5/9 + 273.15;
+console.log(k3 + "K");
 
 //DESAFIO 2
 
