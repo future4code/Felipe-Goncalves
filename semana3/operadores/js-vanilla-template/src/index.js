@@ -41,9 +41,9 @@
 // EXERCICIO 3
 
 // let arraylistaDeTarefas = [];
-// let tarefa1 = prompt("Site uma tarefa que precise realizar!");
-// let tarefa2 = prompt("Site outra tarefa que precise realizar!");
-// let tarefa3 = prompt("Site outra tarefa que precise realizar!");
+// let tarefa1 = prompt("Cite uma tarefa que precise realizar!");
+// let tarefa2 = prompt("Cite outra tarefa que precise realizar!");
+// let tarefa3 = prompt("Cite outra tarefa que precise realizar!");
 // arraylistaDeTarefas.push(tarefa1, tarefa2, tarefa3);
 // console.log(arraylistaDeTarefas);
 
