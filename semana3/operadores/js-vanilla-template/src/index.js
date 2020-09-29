@@ -64,35 +64,34 @@
 
 // 1. a.
 
-// const k1 = (- 32)*5/9 + 273.15;
-// const f1 = 77;
-// const resultado =  (f1 - 32)*5/9 + 273.15;
+// let k1 = (- 32)*5/9 + 273.15;
+// let f1 = 77;
+// let resultado =  (f1 - 32)*5/9 + 273.15;
 // console.log(resultado);
 
 // // b.
 
-// const f2 = (0)*9/5 + 32;
-// const c2 = 80;
+// let f2 = (0)*9/5 + 32;
+// let c2 = 80;
 // const resultado2 = (c2)*9/5 + 32;
 // console.log(resultado2);
 
 // c.
 
-let f3 = (0)*9/5 + 32;
-let c3 = 30;
-let resultado3 = (c3)*9/5 + 32;
-console.log(resultado3 + "F");
+// let f3 = (0)*9/5 + 32;
+// let c3 = 30;
+// let resultado3 = (c3)*9/5 + 32;
+// console.log(resultado3 + "F");
 
-let k3 = ( - 32)*5/9 + 273.15;
-let resultado4 = (c3 - 32)*5/9 + 273.15;
-console.log(resultado4 + "k");
+// let k3 = ( - 32)*5/9 + 273.15;
+// let resultado4 = (c3 - 32)*5/9 + 273.15;
+// console.log(resultado4 + "k");
 
 // d.
 let valor = prompt("Valor em Celsius que deseja converter");
 valor = Number(valor);
 f3 = (valor)*9/5 + 32;
 console.log(f3 + "F");
-
 k3 = (valor - 32)*5/9 + 273.15;
 console.log(k3 + "K");
 
