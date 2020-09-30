@@ -12,7 +12,7 @@
 
 // c. não havera um acesso pois há uma solicitação de escopo global para o escopo local.
 
-// // 4. 
+// // 4.
 // let idade = Number(prompt("Qual sua idade?"))
 
 // if (idade >= 18){
@@ -32,7 +32,7 @@
 
 // }else{
 //     console.log("Boa noite!")
-// } 
+// }
 
 // // 6
 // switch (horario){
@@ -46,7 +46,7 @@
 
 //     case "n":
 //     console.log("Boa noite!")
-//     break   
+//     break
 
 // }
 
@@ -55,14 +55,13 @@
 // let valorIgresso =  Number(prompt("Qual valor do seu ingresso"))
 
 // if (genero === "fantasia" && valorIgresso < 15 ){
-//     console.log("Bom filme!") 
- 
+//     console.log("Bom filme!")
+
 // }else {
 //     console.log("Escolha outro filme!")
 // }
 
 // Desafio
-
 
 // let genero = prompt("Qual genero de filmes vc assistirá?").toLowerCase()
 // let valorIgresso =  Number(prompt("Qual valor do seu ingresso"))
@@ -70,46 +69,176 @@
 // if (genero === "fantasia" && valorIgresso < 15 ){
 //     console.log("Bom filme!")
 //     let slack = prompt("que snack vc deseja ( pipoca, chocolate ou doces)?").toLowerCase()
-        // console.log("Bom filme!" + "Com " + slack)
+// console.log("Bom filme!" + "Com " + slack)
 
- 
 // }else {
 //     console.log("Escolha outro filme!")
 // }
 
 // DESAFIO 2
 
-let nome = prompt("Nome completo").toLowerCase()
-let tipoDeJogo = prompt("Qual tipo de jogo IN para internacional ou DO para domestico").toLowerCase()
-let etapaDeJogo = prompt("Qual a etapa de jogo SF semi-final, DT terceiro lugar e FI final")
-let categoria = Number(prompt("Escolha a categoria de 1 a 4"))
-let quantidadeDeIngresso = Number(prompt("Quantidade de ingresso"))
+let nome = prompt("Nome completo").toLowerCase();
+let tipoDeJogo = prompt(
+  "Qual tipo de jogo IN para internacional ou DO para domestico"
+).toLowerCase();
+let etapaDeJogo = prompt(
+  "Qual a etapa de jogo SF semi-final, DT terceiro lugar e FI final"
+);
+let categoria = Number(prompt("Escolha a categoria de 1 a 4"));
+let quantidadeDeIngresso = Number(prompt("Quantidade de ingresso"));
 
-let valorEmReal = 0
-let valorEmDolar = valorEmReal / 4.10;
+let valorEmReal = 0;
+let valorEmDolar = valorEmReal / 4.1;
 
-if (tipoDeJogo === "in"){
-    tipoDeJogo = "internacional"
-} else if (tipoDeJogo === "do"){
-    tipoDeJogo = "domestico"
+if (tipoDeJogo === "in") {
+  tipoDeJogo = "internacional";
+} else if (tipoDeJogo === "do") {
+  tipoDeJogo = "domestico";
 }
 
-if ((etapaDeJogo === "sf" && categoria === 1) || (etapaDeJogo === "fi" && categoria === 2)) {
-    valorEmReal = 1320,00
-    valorEmDolar = valorEmReal / 4
+if (
+  (etapaDeJogo === "sf" && categoria === 1) ||
+  (etapaDeJogo === "fi" && categoria === 2)
+) {
+  valorEmReal = 1320.0;
+  valorEmDolar = valorEmReal / 4;
 
-   if(etapaDeJogo === "sf"){
-        etapaDeJogo = "semi-final"
-   } else if (etapaDeJogo === "dt"){
-       etapaDeJogo = "terceiro lugar"
-   }else if (etapaDeJogo === "fi"){
-       etapaDeJogo = "final"
-   }else {
-       console.log("Não existe jogo")
-   }
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
 }
 
+if (
+  (etapaDeJogo === "sf" && categoria === 2) ||
+  (etapaDeJogo === "fi" && categoria === 3)
+) {
+  valorEmReal = 880.0;
+  valorEmDolar = valorEmReal / 4;
 
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (
+  (etapaDeJogo === "dt" && categoria === 3) ||
+  (etapaDeJogo === "fi" && categoria === 4)
+) {
+  valorEmReal = 330.0;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "fi" && categoria === 1) {
+  valorEmReal = 1980.0;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "dt" && categoria === 1) {
+  (valorEmReal = 660), 00;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "dt" && categoria === 2) {
+  (valorEmReal = 440), 00;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "sf" && categoria === 3) {
+  (valorEmReal = 550), 00;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "sf" && categoria === 4) {
+  (valorEmReal = 220), 00;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
+
+if (etapaDeJogo === "dt" && categoria === 4) {
+  (valorEmReal = 170), 00;
+  valorEmDolar = valorEmReal / 4;
+
+  if (etapaDeJogo === "sf") {
+    etapaDeJogo = "semi-final";
+  } else if (etapaDeJogo === "dt") {
+    etapaDeJogo = "terceiro lugar";
+  } else if (etapaDeJogo === "fi") {
+    etapaDeJogo = "final";
+  } else {
+    console.log("Não existe jogo");
+  }
+}
 
 console.log(`---Dados da Compra---
 Nome do cliente: ${nome}
@@ -117,14 +246,12 @@ Tipo de jogo: ${tipoDeJogo}
 Etapa do jogo: ${etapaDeJogo}
 Categoria: ${categoria}
 Quantidade de Ingresso: ${quantidadeDeIngresso} ingressos
-----Valores----`)
+----Valores----`);
 
-
-if (tipoDeJogo === "domestico"){
-    console.log(`Valor do ingresso R$ ${valorEmReal}`)
-    console.log(` Valor Total: ${valorEmReal * quantidadeDeIngresso}`)
-}else{
-    console.log(`Valor do ingresso U$ ${valorEmDolar}`)
-    console.log(` Valor Total: ${valorEmDolar * quantidadeDeIngresso}`)
+if (tipoDeJogo === "domestico") {
+  console.log(`Valor do ingresso R$ ${valorEmReal}`);
+  console.log(` Valor Total: R$ ${valorEmReal * quantidadeDeIngresso}`);
+} else {
+  console.log(`Valor do ingresso U$ ${valorEmDolar}`);
+  console.log(` Valor Total: U$ ${valorEmDolar * quantidadeDeIngresso}`);
 }
-
