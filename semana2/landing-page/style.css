@@ -1,0 +1,103 @@
+/* Style Geral */
+* {
+  margin: 0.2em;
+  padding: 0;
+}
+
+body {
+
+  font-family: "Courier New", Courier, monospace;
+  background: rgb(222, 222, 226);
+}
+
+.logo {
+  height: 20vh;
+}
+
+nav {
+  background: rgb(222, 222, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+a {
+  text-decoration: none;
+}
+
+.atc-sobreNos{
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+#vitrine {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.vitrine1{
+    font-size: 2em;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.paragrafo-imagem{
+    font-size: 0.5em;
+}
+
+
+.img-vitrine {
+  height: 45vh;
+  width: 35vw;
+}
+
+footer {
+  background: rgb(164, 164, 175);
+}
+
+.icon{
+    width: 5vw;
+    height: 10vh;
+    border-radius: 1em;
+}
+
+@media screen and (max-width: 420px){
+
+    .logo {
+        height: 13vh;
+      }
+
+      .p-sobreNos{
+        margin-top: 2em;
+          
+      }
+
+    .atc-sobreNos{
+        text-align: left;
+        letter-spacing: 0.2em;
+    }
+
+    #vitrine{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .img-vitrine {
+        height: 20vh;
+        width: 30vh;
+      }
+}
