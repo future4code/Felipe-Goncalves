@@ -64,16 +64,24 @@
 
 // const arrayOriginal = [0, 5, 10, 15, 20, 25, 30, 35];
 
-// let menorValor = arrayOriginal[0];
-// let maiorValor = arrayOriginal[0];
+let menorValor = arrayOriginal[0];
+let maiorValor = arrayOriginal[0];
 
-// for (let i = 0; i < arrayOriginal.length; i++) {
-//   maiorValor = arrayOriginal[i];
-// }
+for (let i = 0; i < arrayOriginal.length; i++) {
+  let elemento = arrayoriginal[0];
 
-// for (let i = 0; i > arrayOriginal.length; i++) {
-//   menorValor = arrayOriginal[i];
-// }
+  if (elemnto > maiorNumero) {
+    maiorValor = elemento;
+  }
+}
 
-// console.log(maiorValor);
-// console.log(menorValor);
+for (let i = 0; i > arrayOriginal.length; i++) {
+  let elemento = arrayoriginal[0];
+
+  if (elemnto > menorNumero) {
+    menorValor = elemento;
+  }
+}
+
+console.log(maiorValor);
+console.log(menorValor);
