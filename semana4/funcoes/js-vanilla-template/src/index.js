@@ -33,67 +33,108 @@
 
 // ------4 a. ESCRITA DE CODIGO
 
-let nome = () => {
-  console.log(
-    "Eu sou Felipe, tenho 30 anos, moro em Caraguatatuba e sou estudante da Labenu."
-  );
-};
-nome();
+// let nome = () => {
+//   console.log(
+//     "Eu sou Felipe, tenho 30 anos, moro em Caraguatatuba e sou estudante da Labenu."
+//   );
+// };
+// nome();
 
-// -------b
+// // -------b
 
-const coletaDeDados = (nome, idade, endereco, estudo) => {
-  if (estudo) {
-    estudo = "sou estudande.";
-  } else {
-    estudo = "não sou estudande";
+// const coletaDeDados = (nome, idade, endereco, estudo) => {
+//   if (estudo) {
+//     estudo = "sou estudande.";
+//   } else {
+//     estudo = "não sou estudande";
+//   }
+//   console.log(
+//     `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e ${estudo}`
+//   );
+// };
+
+// coletaDeDados("Felipe", 30, "Caraguatatuba", true);
+
+// // --------5 a.
+
+// function pegaNumero(a, b) {
+//   let somaNumero = a + b;
+//   console.log("A soma é " + somaNumero);
+
+//   return somaNumero;
+// }
+
+// pegaNumero(500, 500);
+
+// // ---------b.
+
+// function comparaNumero(x, y) {
+//   if (x >= y) {
+//     console.log("São iguais");
+//   } else {
+//     console.log("São diferentes");
+//   }
+// }
+
+// comparaNumero(4, 4);
+
+// // --------c.
+
+// let repeteFrase = (a) => {
+//   for (let i = 0; i < 10; i++) {
+//     console.log(a);
+//   }
+// };
+
+// repeteFrase("Oi mundo");
+
+// // ------6 a.
+
+// const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+
+// function contaElemento() {
+//   return minhaArray.length;
+// }
+
+// console.log(contaElemento());
+
+// // --------b.
+// let informaPar = (a) => {
+//   if (a % 2 === 0) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// };
+
+// informaPar(5);
+
+// // -------- c.
+// let arrayPares = [];
+
+// let informaQuantidade = () => {
+//   for (let i of minhaArray) {
+//     if (i % 2 === 0) {
+//       arrayPares.push(i);
+//     }
+//   }
+// };
+
+// informaQuantidade(arrayPares);
+// console.log("A quantidade de numeros pares são: " + arrayPares.length);
+
+// // ------ d.
+
+const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+
+let arrayPares = [];
+
+let informaQuantidadeEPares = () => {
+  for (let i = 0; minhaArray.length; i++) {
+    if (i % 2 === 0) {
+      arrayPares.push(true);
+    }
   }
-  console.log(
-    `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e ${estudo}`
-  );
 };
 
-coletaDeDados("Felipe", 30, "Caraguatatuba", true);
-
-// --------5 a.
-
-function pegaNumero(a, b) {
-  let somaNumero = a + b;
-  console.log("A soma é " + somaNumero);
-
-  return somaNumero;
-}
-
-pegaNumero(500, 500);
-
-// ---------b.
-
-function comparaNumero(x, y) {
-  if (x === y) {
-    console.log("São iguais");
-  } else {
-    console.log("São diferentes");
-  }
-}
-
-comparaNumero(4, 4);
-
-// --------c.
-
-let repeteFrase = (a) => {
-  for (let i = 0; i < 10; i++) {
-    console.log(a);
-  }
-};
-
-repeteFrase("Oi mundo");
-
-// ------6 a.
-
-const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
-
-function contaElemento (minhaArray) {
-    
-    
-    
-}
+console.log(informaQuantidadeEPares());
