@@ -33,27 +33,67 @@
 
 // ------4 a. ESCRITA DE CODIGO
 
-// let nome = () => {
-//   console.log(
-//     "Eu sou Felipe, tenho 30 anos, moro em Caraguatatuba e sou estudante da Labenu."
-//   );
-// };
-// nome();
+let nome = () => {
+  console.log(
+    "Eu sou Felipe, tenho 30 anos, moro em Caraguatatuba e sou estudante da Labenu."
+  );
+};
+nome();
 
 // -------b
 
 const coletaDeDados = (nome, idade, endereco, estudo) => {
-  nome = "Felipe";
-  idade = 30;
-  endereco = "Caraguatatuba";
-
-  const concat = `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e `;
-
-  if (estudo === "sim") {
-    console.log(concat + "Sou estudande");
+  if (estudo) {
+    estudo = "sou estudande.";
   } else {
-    console.log(concat + "não sou estudande");
+    estudo = "não sou estudande";
+  }
+  console.log(
+    `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e ${estudo}`
+  );
+};
+
+coletaDeDados("Felipe", 30, "Caraguatatuba", true);
+
+// --------5 a.
+
+function pegaNumero(a, b) {
+  let somaNumero = a + b;
+  console.log("A soma é " + somaNumero);
+
+  return somaNumero;
+}
+
+pegaNumero(500, 500);
+
+// ---------b.
+
+function comparaNumero(x, y) {
+  if (x === y) {
+    console.log("São iguais");
+  } else {
+    console.log("São diferentes");
+  }
+}
+
+comparaNumero(4, 4);
+
+// --------c.
+
+let repeteFrase = (a) => {
+  for (let i = 0; i < 10; i++) {
+    console.log(a);
   }
 };
 
-let todosOsDados = coletaDeDados("sim");
+repeteFrase("Oi mundo");
+
+// ------6 a.
+
+const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+
+function contaElemento (minhaArray) {
+    
+    
+    
+}
