@@ -129,12 +129,13 @@ const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
 
 let arrayPares = [];
 
-let informaQuantidadeEPares = () => {
+let informaParidade = () => {
   for (let i = 0; minhaArray.length; i++) {
-    if (i % 2 === 0) {
+    if (minhaArray[i] % 2 === 0) {
       arrayPares.push(true);
-    }
+    }else{}
   }
+  return arrayPares
 };
 
-console.log(informaQuantidadeEPares());
+console.log(informaParidade());
