@@ -125,17 +125,17 @@
 
 // // ------ d.
 
-const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
+// const minhaArray = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22];
 
-let arrayPares = [];
+// let arrayPares = [];
 
-let informaParidade = () => {
-  for (let i = 0; minhaArray.length; i++) {
-    if (minhaArray[i] % 2 === 0) {
-      arrayPares.push(true);
-    }else{}
-  }
-  return arrayPares
-};
+// let informaParidade = () => {
+//   for (let i = 0; minhaArray.length; i++) {
+//     if (minhaArray[i] % 2 === 0) {
+//       arrayPares.push(true);
+//     }else{}
+//   }
+//   return arrayPares
+// };
 
-console.log(informaParidade());
+// console.log(informaParidade());
