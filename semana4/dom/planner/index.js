@@ -6,8 +6,8 @@ function criarTarefa() {
   const acrescentar = document.getElementById(diasSemanas);
 
   contador = contador++;
-  let id = `tarefa-${contador}`
-  
+  let id = `apaga-${contador}`;
+
   if (inputTarefa.value === "") {
     alert("Digite uma tarefa!!!!!");
   } else {
@@ -18,4 +18,13 @@ function criarTarefa() {
 
 function riscaTarefa(id) {
   document.getElementById(id).style.textDecoration = "line-through";
+}
+
+function limparTarefa() {
+  const inputTarefa = document.getElementById("tarefa");
+  const diasSemanas = document.getElementById("dias-semana").value;
+  const acrescentar = document.getElementById(diasSemanas);
+
+  acrescentar.innerHTML = "";
+  inputTarefa.value = "";
 }

@@ -11,26 +11,24 @@
 
   <body>
     <header>
-
       <form action="">
         <label for="tarefa">Nova tarefa:</label>
         <input type="text" id="tarefa" />
 
-        <select name="dias-semana"  id="dias-semana">
-          <option id="dia-domingo"  value="domingo">Domingo</option>
-          <option id="dia-segunda" onclick="riscaTarefa()" value="segunda">Segunda-feira</option>
-          <option id="dia-terca" onclick="riscaTarefa()" value="terca">Terça-feira</option>
+        <select name="dias-semana" id="dias-semana">
+          <option id="dia-domingo" value="domingo">Domingo</option>
+          <option id="dia-segunda" value="segunda">Segunda-feira</option>
+          <option id="dia-terca" value="terca">Terça-feira</option>
           <option id="dia-quarta" value="quarta">Quarta-feira</option>
           <option id="dia-quinta" value="quinta">Quinta-feira</option>
           <option id="dia-sexta" value="sexta">Sexta-feira</option>
           <option id="dia-sabado" value="sabado">Sábado</option>
         </select>
-        
       </form>
 
+      <button onclick="limparTarefa()">Limpar</button>
       <button onclick="criarTarefa()">Criar tarefa</button>
     </header>
-
 
     <section>
       <div class="semana">
@@ -68,6 +66,5 @@
         <div id="sabado"></div>
       </div>
     </section>
-
   </body>
 </html>
