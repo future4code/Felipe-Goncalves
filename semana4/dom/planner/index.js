@@ -5,7 +5,7 @@ function criarTarefa() {
   const diasSemanas = document.getElementById("dias-semana").value;
   const acrescentar = document.getElementById(diasSemanas);
 
-  contador = contador++;
+  contador++;
   let id = `apaga-${contador}`;
 
   if (inputTarefa.value === "") {
