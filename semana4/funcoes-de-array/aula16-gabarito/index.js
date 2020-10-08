@@ -32,10 +32,8 @@ function imprimirExtrato() {
       gastoViagem += despesa.valor;
     }
 
-    gastoTotal = gastoUtilidades + gastoAlimentacao + gastoViagem
+    gastoTotal = gastoUtilidades + gastoAlimentacao + gastoViagem;
   });
-
-
 
   divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
                                         Utilidades: R$${gastoUtilidades} | Viagem: R$${gastoViagem}</p>`;
@@ -83,7 +81,15 @@ function filtrarDespesas() {
   let valorMin = Number(document.getElementById("valorFiltroMin").value);
   let valorMax = Number(document.getElementById("valorFiltroMax").value);
 
-  let despesasFiltradas; // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
+  let despesasFiltradas = arrDespesas.filter((despesa) => {
+    if (
+      (tipoFiltro === despesa.tipo || tipoFiltro === "todos") &&
+      despesa.valor >= valorMin &&
+      despesa.valor <= valorMax
+    ) {
+      return true;
+    }
+  }); // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
 
   imprimirDespesas(despesasFiltradas);
 }
