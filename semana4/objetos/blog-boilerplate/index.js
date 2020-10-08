@@ -26,5 +26,4 @@ let adicionarPost = () => {
 
   let arrayDeDados = [dadosFormulario];
   console.log(arrayDeDados);
-  // DESAFIO
 };
