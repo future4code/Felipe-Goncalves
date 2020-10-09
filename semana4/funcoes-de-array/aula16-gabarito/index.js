@@ -7,7 +7,6 @@ function imprimirDespesas(despesas) {
   let divDespesas = document.getElementById("despesas");
   divDespesas.innerHTML = "<p><u>Despesas Detalhadas</u></p>";
 
-  // AQUI VEM A IMPLEMENTAÇÃO
   despesas.forEach((despesas) => {
     divDespesas.innerHTML += `<p>valor: R$ ${despesas.valor}| tipo: ${despesas.tipo} | descrição: ${despesas.descricao}<p/>`;
   });
@@ -20,8 +19,6 @@ function imprimirExtrato() {
   let gastoAlimentacao = 0;
   let gastoUtilidades = 0;
   let gastoViagem = 0;
-
-  // AQUI VEM A IMPLEMENTAÇÃO
 
   arrDespesas.forEach((despesa) => {
     if (despesa.tipo === "alimentação") {
@@ -89,14 +86,10 @@ function filtrarDespesas() {
     ) {
       return true;
     }
-  }); // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
+  });
 
   imprimirDespesas(despesasFiltradas);
 }
-
-// FunÇoes que fazem validaÇoes dos inputs de criaÇao de despesas
-
-// NÃO SE PREOCUPEM EM ENTENDER ESSAS FUNÇÕES
 
 function validarValor(valor) {
   if (valor.value.length > 0 && parseInt(valor.value) > 0) {
