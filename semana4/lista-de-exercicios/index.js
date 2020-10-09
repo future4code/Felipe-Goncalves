@@ -98,3 +98,40 @@ function verifcaLado (a, b, c) {
 
 console.log(verifcaLado(2, 4, 3))
 
+// -------EXERCICIO 5
+
+let numero1 = 60
+let numero2 = 35
+
+if(numero1 < numero2){
+    console.log(`O numero maior é: ${numero2}`)
+}else {
+    console.log(`O numero maior é: ${numero1}`)
+}
+
+if(numero1 % numero2 === 0){
+
+    console.log(`${numero1} é divisivel por ${numero2}`)
+}else{
+
+    console.log(`${numero1} não é dividivel por ${numero2}`)
+}
+
+if (numero2 % numero1 === 0){
+
+    console.log(`${numero2} é divisivel ${numero1}`)
+}else {
+    console.log(`${numero2} não é divisivel por ${numero1}`)
+}
+
+if ( numero1 > numero2){
+
+    let resultado = numero1 - numero2
+    console.log(`A diferença entre eles é: ${resultado}`)
+    
+}else if (numero2 > numero1){
+    resultado = numero2 - numero1
+    console.log(`a difetença entre eles é: ${resultado}`)
+}else {
+    console.log(`Eles são iguais!!!!`)
+}
