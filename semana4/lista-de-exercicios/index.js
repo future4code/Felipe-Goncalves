@@ -73,14 +73,28 @@
 
 // -------EXERCICIO 3
 
+// const quantidadeDeNumerosPares = 3
+// let i = 0
 
-const quantidadeDeNumerosPares = 3
-let i = 0
-
-while(i < quantidadeDeNumerosPares) {
-  console.log(i*2)
-  i++
-}
+// while(i < quantidadeDeNumerosPares) {
+//   console.log(i*2)
+//   i++
+// }
 
 // Não funciona. Porque o sinal maior igual que do loop esta errado pois assim não sera impresso o numero que for digitado e sem a condição de incremento seria um loop infinito.
+
+// -------EXERCICIO 4
+
+function verifcaLado (a, b, c) {
+    if((a === b) && (b === c)){
+        return "É um trianqulo equilatero"
+    }else if ((a === b && b != c ) || (a != b && b === c) || (a === c && b === c)){
+        return "É um triagulo isócele"
+    }else{
+        return "É um trinagulo escaleno"
+    }
+
+}
+
+console.log(verifcaLado(2, 4, 3))
 
