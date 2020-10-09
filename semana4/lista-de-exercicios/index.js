@@ -85,53 +85,72 @@
 
 // -------EXERCICIO 4
 
-function verifcaLado (a, b, c) {
-    if((a === b) && (b === c)){
-        return "É um trianqulo equilatero"
-    }else if ((a === b && b != c ) || (a != b && b === c) || (a === c && b === c)){
-        return "É um triagulo isócele"
-    }else{
-        return "É um trinagulo escaleno"
-    }
+// function verifcaLado (a, b, c) {
+//     if((a === b) && (b === c)){
+//         return "É um trianqulo equilatero"
+//     }else if ((a === b && b != c ) || (a != b && b === c) || (a === c && b === c)){
+//         return "É um triagulo isócele"
+//     }else{
+//         return "É um trinagulo escaleno"
+//     }
 
-}
+// }
 
-console.log(verifcaLado(2, 4, 3))
+// console.log(verifcaLado(2, 4, 3))
 
-// -------EXERCICIO 5
+// // -------EXERCICIO 5
 
-let numero1 = 60
-let numero2 = 35
+// let numero1 = 60
+// let numero2 = 35
 
-if(numero1 < numero2){
-    console.log(`O numero maior é: ${numero2}`)
-}else {
-    console.log(`O numero maior é: ${numero1}`)
-}
+// if(numero1 < numero2){
+//     console.log(`O numero maior é: ${numero2}`)
+// }else {
+//     console.log(`O numero maior é: ${numero1}`)
+// }
 
-if(numero1 % numero2 === 0){
+// if(numero1 % numero2 === 0){
 
-    console.log(`${numero1} é divisivel por ${numero2}`)
-}else{
+//     console.log(`${numero1} é divisivel por ${numero2}`)
+// }else{
 
-    console.log(`${numero1} não é dividivel por ${numero2}`)
-}
+//     console.log(`${numero1} não é dividivel por ${numero2}`)
+// }
 
-if (numero2 % numero1 === 0){
+// if (numero2 % numero1 === 0){
 
-    console.log(`${numero2} é divisivel ${numero1}`)
-}else {
-    console.log(`${numero2} não é divisivel por ${numero1}`)
-}
+//     console.log(`${numero2} é divisivel ${numero1}`)
+// }else {
+//     console.log(`${numero2} não é divisivel por ${numero1}`)
+// }
 
-if ( numero1 > numero2){
+// if ( numero1 > numero2){
 
-    let resultado = numero1 - numero2
-    console.log(`A diferença entre eles é: ${resultado}`)
+//     let resultado = numero1 - numero2
+//     console.log(`A diferença entre eles é: ${resultado}`)
     
-}else if (numero2 > numero1){
-    resultado = numero2 - numero1
-    console.log(`a difetença entre eles é: ${resultado}`)
-}else {
-    console.log(`Eles são iguais!!!!`)
+// }else if (numero2 > numero1){
+//     resultado = numero2 - numero1
+//     console.log(`a difetença entre eles é: ${resultado}`)
+// }else {
+//     console.log(`Eles são iguais!!!!`)
+// }
+
+// -----EXERCICIO DE FUNÇÔES------
+
+// --------1.
+
+const numerosArray = [22, 44, 55, 111, 474, 232, 9876]
+let primeiroMaior = numerosArray[0]
+let segundoMaiot = numerosArray[0]
+
+const comparaSegundo = (numerosArray) => {
+    for(let i = 0; i < numerosArray.length; i++){
+
+        if(primeiroMaior < numerosArray[i]){
+
+            primeiroMaior = numerosArray[i]
+        }
+    }
+    
 }
