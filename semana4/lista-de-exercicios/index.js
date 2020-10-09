@@ -53,30 +53,34 @@
 
 // }
 
-//----------EXERCICIO 2
+// //----------EXERCICIO 2
 
-//--------- 2a
-true && false && true // RETORNARIA FALSE
+// //--------- 2a
+// true && false && true // RETORNARIA FALSE
 
-// --------2B
-(true && false) || !false // RETORNARIA TRUE
+// // --------2B
+// (true && false) || !false // RETORNARIA TRUE
 
-// -------2c
-(false || true) && (false || true) // RETORNARIA TRUE 
+// // -------2c
+// (false || true) && (false || true) // RETORNARIA TRUE 
 
-// -------2d
-!(false && true) || !(true && true) // RETORNA TRUE
+// // -------2d
+// !(false && true) || !(true && true) // RETORNA TRUE
 
-//--------2e
-!(true) && !(true) || (!false && true && true)//RETORNA TRUE
+// //--------2e
+// !(true) && !(true) || (!false && true && true)//RETORNA TRUE
 
 
 // -------EXERCICIO 3
 
 
-const quantidadeDeNumerosPares
+const quantidadeDeNumerosPares = 3
 let i = 0
 
-while(i <= quantidadeDeNumerosPares) {
+while(i < quantidadeDeNumerosPares) {
   console.log(i*2)
+  i++
 }
+
+// Não funciona. Porque o sinal maior igual que do loop esta errado pois assim não sera impresso o numero que for digitado e sem a condição de incremento seria um loop infinito.
+
