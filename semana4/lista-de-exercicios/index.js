@@ -143,22 +143,25 @@
 
 // --------1.
 
-// const numerosArray = [22, 44, 55, 111, 474, 232, 9876];
-// let primeiroMaior = numerosArray[0];
-// let segundoMaior = numerosArray[0];
+const numerosArray = [22, 44, 55, 111, 474, 232, 9876];
+let primeiroMaior = numerosArray[0];
+let segundoMaior = numerosArray[0];
 
-// const comparaSegundo = (numerosArray) => {
-//   for (let i = 0; i < primeiroMaior; i++) {
-//     if (i < primeiroMaior) {
-//       primeiroMaior = numerosArray[i];
-//     } else {
-//       segundoMaior = numerosArray[i];
-//     }
-//   }
+const comparaSegundo = (n) => {
+  for (let i = 0; i < primeiroMaior; i++) {
+    if (i < primeiroMaior) {
+      segundoMaior = primeiroMaior;
+      primeiroMaior = n[i];
+    } else {
+      segundoMaior = n[i];
+    }
+    numerosArray.splice(5,6)
+}
+return segundoMaior;
 
-//   return segundoMaior;
-// };
-// console.log(comparaSegundo(numerosArray));
+};
+
+console.log(comparaSegundo(numerosArray));
 
 // ----------EXERCICIO 2----------
 
@@ -364,22 +367,22 @@
 
 // --------EXERCICIO 5
 
-const contas = [
-  { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
-  { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
-  { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
-  { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
-  { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
-  { cliente: "Soter", saldoTotal: 1200, compras: [] },
-];
+// const contas = [
+//   { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+//   { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+//   { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+//   { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+//   { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+//   { cliente: "Soter", saldoTotal: 1200, compras: [] },
+// ];
 
-const saldoTotal = contas.forEach((n1) => {
-  let soma = 0;
+// const saldoTotal = contas.forEach((n1) => {
+//   let soma = 0;
 
-  for (let compra of n1.compras) {
-    soma += compra;
-  }
+//   for (let compra of n1.compras) {
+//     soma += compra;
+//   }
 
-  n1.saldoTotal -= soma;
-});
-console.log(contas);
+//   n1.saldoTotal -= soma;
+// });
+// console.log(contas);
