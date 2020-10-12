@@ -305,11 +305,61 @@
 
 // ------EXERCICIO 3b.
 
-
 // const pessoasNaoPermitido = pessoas.filter((a) => {
 //     if (a.idade <= 14 || a.idade >= 60 || a.altura < 1.5) {
 //       return true;
 //     }
-  
+
 //     return false;
 //   });
+
+// ----------EXERCICIO 4
+
+const consultas = [
+  {
+    nome: "João",
+    genero: "masculino",
+    cancelada: true,
+    dataDaConsulta: "01/10/2019",
+  },
+  {
+    nome: "Pedro",
+    genero: "masculino",
+    cancelada: false,
+    dataDaConsulta: "02/10/2019",
+  },
+  {
+    nome: "Paula",
+    genero: "feminino",
+    cancelada: true,
+    dataDaConsulta: "03/11/2019",
+  },
+  {
+    nome: "Márcia",
+    genero: "feminino",
+    cancelada: false,
+    dataDaConsulta: "04/11/2019",
+  },
+];
+
+const pacientes = consultas.filter((n) => {
+  if (n.cancelada === false && n.genero === "masculino") {
+    console.log(
+      `Olá, Sr. ${n.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${n.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail`
+    );
+  } else if (n.cancelada === false && n.genero === "feminino") {
+    console.log(
+      `Olá, Sra. ${n.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${n.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail`
+    );
+  } else if (n.cancelada === true && n.genero === "masculino") {
+    console.log(
+      `Olá, Sr. ${n.nome}. Infelizmente, sua consulta marcada para o dia ${n.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+    );
+  } else {
+    console.log(
+      `Olá, Sra. ${n.nome}. Infelizmente, sua consulta marcada para o dia ${n.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+    );
+  }
+});
+
+
