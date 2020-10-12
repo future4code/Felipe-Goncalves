@@ -193,7 +193,7 @@
 
 // let filme = {
 //   titulo: "Ghost - Do outro lado da vida",
-//   ano: 1980,
+//   ano: 1990,
 //   diretor: "Jerry Zucker",
 //   ator: "Patrick Swayze",
 //   atriz: "Demi Moore",
@@ -204,4 +204,21 @@
 // );
 
 // -------EXERCICIO 4
+
+let pessoa = {
+  nome: "Felipe Polato",
+  idade: 30,
+  email: "emaildapessoa@.com",
+  endereco: "Caraguatatuba - SP"
+};
+
+const anonimizarPessoa = (a) => {
+    let anonimo = {
+        ...pessoa,
+        nome: "Anonimo"
+    }
+return anonimo
+};
+
+console.log(anonimizarPessoa())
 
