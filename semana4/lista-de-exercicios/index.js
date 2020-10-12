@@ -265,9 +265,22 @@
 
 // ----------EXERCICIO 2b.
 
+// const array = [1, 2, 3, 4, 5, 6];
+
+// const multiplosDeTres = array.map((n) => {
+//   return String(n * 3);
+// });
+// console.log(multiplosDeTres);
+
+// -------EXERCICIO 2c
+
 const array = [1, 2, 3, 4, 5, 6];
 
-const multiplosDeTres = array.map((n) => {
-  return String(n * 3);
+const imparPar = array.map((n) => {
+
+    if(n % 2 === 1){
+        return `${n} é impar`
+    }
+    return `${n} é par`
 });
-console.log(multiplosDeTres);
+ console.log(imparPar)
