@@ -179,21 +179,43 @@
 // Usa - se array quando quiser armazenar valores em numero e objetos quando for para armazenar valores em strings.
 
 // ---------EXERCICIO 2
-let lado1 
-let lado2 
+// let lado1 
+// let lado2 
 
-const criarRetangulo = (lado1, lado2) =>{
+// const criarRetangulo = (lado1, lado2) =>{
     
     
-        let retangulo = {
-        largura: lado1,
-        altura: lado2,
-        perimetro: 2*(lado1 + lado2),
-        area: lado1*lado2
+//         let retangulo = {
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: 2*(lado1 + lado2),
+//         area: lado1*lado2
         
-    }
-    return retangulo
-}
+//     }
+//     return retangulo
+// }
 
-console.log(criarRetangulo(20,30))
+// console.log(criarRetangulo(20,30))
 
+// --------EXERCICIO 3
+// let titulo = "Ghost - Do outro lado da vida"
+// let ano = 1980
+// let diretor = "Jerry Zucker"
+// let ator =  "Patrick Swayze"
+// let atriz = "Demi Moore"
+
+// const filmeFavorito = (titulo, ano, diretor, ator, atriz) => {
+
+//     let filme = {
+//         titulo: titulo,
+//         ano: ano,
+//         diretor: diretor,
+//         ator: ator,
+//         atriz: atriz
+//     }
+
+
+//     return filme
+// }
+// filmeFavorito()
+// console.log(`Venha assistir ao filme ${titulo}, do ${ano}, dirigido por ${diretor} e estrelado por ${ator} e ${atriz}`)
