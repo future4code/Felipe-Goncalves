@@ -163,3 +163,11 @@ const comparaSegundo = (numerosArray) => {
 }
 console.log(comparaSegundo(numerosArray))
 
+// ----------EXERCICIO 2----------
+
+const olaLabenu = () => {
+    alert("Hello Labenu!!!!!")
+    
+}
+
+olaLabenu()
