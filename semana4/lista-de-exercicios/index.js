@@ -1,6 +1,6 @@
-// ------------EXERCICIO 1. 
+// ------------EXERCICIO 1.
 // O trecho esta realizando uma função com um retorno de equação matematica para saber a coverção do dolar para real.
-// Fazendo da seguinte forma: 
+// Fazendo da seguinte forma:
 // A função recebe como parametro o valor em dolar desejado, transforma esse prompt ( pedido ao usuario) em numero e multiplica pela variavel cotação, quando invocada a função. No console será impreço a seguinta frase: R$ "valor que será convertido".
 
 // ------------EXERCICIO 2.
@@ -21,7 +21,7 @@
 
 //O trecho de codigo esta fazendo um loop que tem como parametro os numero do array.
 // O loop faz duas condiçoes ira percorrer todos os numeros da array numeros e ver qual sera o menor numero e na segunda condição verificar qual numero da array numeros é amior que zero
-// ira ser impresso no primeiro console -10 
+// ira ser impresso no primeiro console -10
 // no segundo console sera impresso 1590
 //---------- LOGICA DE PROGRAMAÇÃO ---------------
 
@@ -38,7 +38,7 @@
 // }
 
 // for(let i = 0; i < minhaArray.length; i++){
-    
+
 //     if(minhaArray[i] % 2 === 0){
 //         array.push(minhaArray[i])
 //     }
@@ -47,7 +47,7 @@
 // let n1 = 0
 
 // while (n1 < 10) {
-//     n1++   
+//     n1++
 
 //     console.log('entendi pq esta rodando meu codigo')
 
@@ -62,7 +62,7 @@
 // (true && false) || !false // RETORNARIA TRUE
 
 // // -------2c
-// (false || true) && (false || true) // RETORNARIA TRUE 
+// (false || true) && (false || true) // RETORNARIA TRUE
 
 // // -------2d
 // !(false && true) || !(true && true) // RETORNA TRUE
@@ -70,33 +70,35 @@
 // //--------2e
 // !(true) && !(true) || (!false && true && true)//RETORNA TRUE
 
-
 // -------EXERCICIO 3
 
-// const quantidadeDeNumerosPares = 3
-// let i = 0
+// const quantidadeDeNumerosPares = 3;
+// let i = 0;
 
-// while(i < quantidadeDeNumerosPares) {
-//   console.log(i*2)
-//   i++
+// while (i < quantidadeDeNumerosPares) {
+//   console.log(i * 2);
+//   i++;
 // }
 
 // Não funciona. Porque o sinal maior igual que do loop esta errado pois assim não sera impresso o numero que for digitado e sem a condição de incremento seria um loop infinito.
 
 // -------EXERCICIO 4
 
-// function verifcaLado (a, b, c) {
-//     if((a === b) && (b === c)){
-//         return "É um trianqulo equilatero"
-//     }else if ((a === b && b != c ) || (a != b && b === c) || (a === c && b === c)){
-//         return "É um triagulo isócele"
-//     }else{
-//         return "É um trinagulo escaleno"
-//     }
-
+// function verifcaLado(a, b, c) {
+//   if (a === b && b === c) {
+//     return "É um trianqulo equilatero";
+//   } else if (
+//     (a === b && b != c) ||
+//     (a != b && b === c) ||
+//     (a === c && b === c)
+//   ) {
+//     return "É um triagulo isócele";
+//   } else {
+//     return "É um trinagulo escaleno";
+//   }
 // }
 
-// console.log(verifcaLado(2, 4, 3))
+// console.log(verifcaLado(2, 4, 3));
 
 // // -------EXERCICIO 5
 
@@ -128,7 +130,7 @@
 
 //     let resultado = numero1 - numero2
 //     console.log(`A diferença entre eles é: ${resultado}`)
-    
+
 // }else if (numero2 > numero1){
 //     resultado = numero2 - numero1
 //     console.log(`a difetença entre eles é: ${resultado}`)
@@ -140,82 +142,66 @@
 
 // --------1.
 
-// const numerosArray = [22, 44, 55, 111, 474, 232, 9876]
-// let primeiroMaior = numerosArray[0]
-// let segundoMaior = numerosArray[0]
+// const numerosArray = [22, 44, 55, 111, 474, 232, 9876];
+// let primeiroMaior = numerosArray[0];
+// let segundoMaior = numerosArray[0];
 
 // const comparaSegundo = (numerosArray) => {
-//     for(let i = 0; i < primeiroMaior; i++){
+//   for (let i = 0; i < primeiroMaior; i++) {
+//     if (i < primeiroMaior) {
+//       primeiroMaior = numerosArray[i];
+//     } else {
+//       segundoMaior = numerosArray[i];
+//     }
+//   }
 
-//         if(i < primeiroMaior){
-            
-//             primeiroMaior = numerosArray[i]
-            
-//         }else{
-//             segundoMaior = numerosArray[i]
-//         }
-
-        
-//     }  
-
-//     return segundoMaior
-    
-// }
-// console.log(comparaSegundo(numerosArray))
+//   return segundoMaior;
+// };
+// console.log(comparaSegundo(numerosArray));
 
 // ----------EXERCICIO 2----------
 
 // const olaLabenu = () => {
-//     alert("Hello Labenu!!!!!")
-    
-// }
+//   alert("Hello Labenu!!!!!");
+// };
 
-// olaLabenu()
+// olaLabenu();
 
 // --------EXERCICIO DE OBJETOS
 
 // --------EXERCICIO 1
 
-// Usa - se array quando quiser armazenar valores em numero e objetos quando for para armazenar valores em strings.
+// Usa - se array quando quiser armazenar valores em numero e objetos quando for para armazenar valores em strings. Fazendo com que o projeto fique mais intuitivo.
 
 // ---------EXERCICIO 2
-// let lado1 
-// let lado2 
+// let lado1;
+// let lado2;
 
-// const criarRetangulo = (lado1, lado2) =>{
-    
-    
-//         let retangulo = {
-//         largura: lado1,
-//         altura: lado2,
-//         perimetro: 2*(lado1 + lado2),
-//         area: lado1*lado2
-        
-//     }
-//     return retangulo
-// }
+// const criarRetangulo = (lado1, lado2) => {
+//   let retangulo = {
+//     largura: lado1,
+//     altura: lado2,
+//     perimetro: 2 * (lado1 + lado2),
+//     area: lado1 * lado2,
+//   };
+//   return retangulo;
+// };
 
-// console.log(criarRetangulo(20,30))
+// console.log(criarRetangulo(20, 30));
 
 // --------EXERCICIO 3
-// let titulo = "Ghost - Do outro lado da vida"
-// let ano = 1980
-// let diretor = "Jerry Zucker"
-// let ator =  "Patrick Swayze"
-// let atriz = "Demi Moore"
 
-// const filmeFavorito = (titulo, ano, diretor, ator, atriz) => {
+// let filme = {
+//   titulo: "Ghost - Do outro lado da vida",
+//   ano: 1980,
+//   diretor: "Jerry Zucker",
+//   ator: "Patrick Swayze",
+//   atriz: "Demi Moore",
+// };
 
-//     let filme = {
-//         titulo: titulo,
-//         ano: ano,
-//         diretor: diretor,
-//         ator: ator,
-//         atriz: atriz
-//     }
+// console.log(
+//   `Venha assistir ao filme ${filme.titulo}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.ator} e ${filme.atriz}`
+// );
 
+// -------EXERCICIO 4
 
-//     return filme
-// }
-// filmeFavorito()
-// console.log(`Venha assistir ao filme ${titulo}, do ${ano}, dirigido por ${diretor} e estrelado por ${ator} e ${atriz}`)
