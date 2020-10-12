@@ -24,7 +24,6 @@
 // ira ser impresso no primeiro console -10
 // no segundo console sera impresso 1590
 
-
 //---------- LOGICA DE PROGRAMAÇÃO ---------------
 
 // 1. for  for/of while
@@ -257,12 +256,18 @@
 
 // -------EXERCICIO 2a
 
+// const array = [1, 2, 3, 4, 5, 6];
+
+// const minhaArray = array.map((n) => {
+//   return n * 2;
+// });
+// console.log(minhaArray);
+
+// ----------EXERCICIO 2b.
+
 const array = [1, 2, 3, 4, 5, 6];
 
-const minhaArray = array.map((n) => {
-
-   return n*2
-
-    
+const multiplosDeTres = array.map((n) => {
+  return String(n * 3);
 });
-console.log(minhaArray)
+console.log(multiplosDeTres);
