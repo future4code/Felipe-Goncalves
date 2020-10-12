@@ -140,34 +140,60 @@
 
 // --------1.
 
-const numerosArray = [22, 44, 55, 111, 474, 232, 9876]
-let primeiroMaior = numerosArray[0]
-let segundoMaior = numerosArray[0]
+// const numerosArray = [22, 44, 55, 111, 474, 232, 9876]
+// let primeiroMaior = numerosArray[0]
+// let segundoMaior = numerosArray[0]
 
-const comparaSegundo = (numerosArray) => {
-    for(let i = 0; i < primeiroMaior; i++){
+// const comparaSegundo = (numerosArray) => {
+//     for(let i = 0; i < primeiroMaior; i++){
 
-        if(i < primeiroMaior){
+//         if(i < primeiroMaior){
             
-            primeiroMaior = numerosArray[i]
+//             primeiroMaior = numerosArray[i]
             
-        }else{
-            segundoMaior = numerosArray[i]
-        }
+//         }else{
+//             segundoMaior = numerosArray[i]
+//         }
 
         
-    }  
+//     }  
 
-    return segundoMaior
+//     return segundoMaior
     
-}
-console.log(comparaSegundo(numerosArray))
+// }
+// console.log(comparaSegundo(numerosArray))
 
 // ----------EXERCICIO 2----------
 
-const olaLabenu = () => {
-    alert("Hello Labenu!!!!!")
+// const olaLabenu = () => {
+//     alert("Hello Labenu!!!!!")
     
+// }
+
+// olaLabenu()
+
+// --------EXERCICIO DE OBJETOS
+
+// --------EXERCICIO 1
+
+// Usa - se array quando quiser armazenar valores em numero e objetos quando for para armazenar valores em strings.
+
+// ---------EXERCICIO 2
+let lado1 
+let lado2 
+
+const criarRetangulo = (lado1, lado2) =>{
+    
+    
+        let retangulo = {
+        largura: lado1,
+        altura: lado2,
+        perimetro: 2*(lado1 + lado2),
+        area: lado1*lado2
+        
+    }
+    return retangulo
 }
 
-olaLabenu()
+console.log(criarRetangulo(20,30))
+
