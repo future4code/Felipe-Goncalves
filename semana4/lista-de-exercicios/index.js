@@ -205,20 +205,39 @@
 
 // -------EXERCICIO 4
 
-let pessoa = {
-  nome: "Felipe Polato",
-  idade: 30,
-  email: "emaildapessoa@.com",
-  endereco: "Caraguatatuba - SP"
-};
+// let pessoa = {
+//   nome: "Felipe Polato",
+//   idade: 30,
+//   email: "emaildapessoa@.com",
+//   endereco: "Caraguatatuba - SP"
+// };
 
-const anonimizarPessoa = (a) => {
-    let anonimo = {
-        ...pessoa,
-        nome: "Anonimo"
-    }
-return anonimo
-};
+// const anonimizarPessoa = (a) => {
+//     let anonimo = {
+//         ...pessoa,
+//         nome: "Anonimo"
+//     }
+// return anonimo
+// };
 
-console.log(anonimizarPessoa())
+// console.log(anonimizarPessoa())
 
+// -------EXERCICIO DE FUNÇÕES DE ARRAY
+
+// ------EXERCICIO 1a.
+
+let pessoasEIdades = [
+  { nome: "Pedro", idade: 20 },
+  { nome: "João", idade: 10 },
+  { nome: "Paula", idade: 12 },
+  { nome: "Artur", idade: 89 },
+];
+
+const idadeAdultos = pessoasEIdades.filter((pessoa, index, array) => {
+  if (pessoa.idade >= 20) {
+    return true;
+  }
+  return false;
+});
+
+console.log(idadeAdultos)
