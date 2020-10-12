@@ -23,6 +23,8 @@
 // O loop faz duas condiçoes ira percorrer todos os numeros da array numeros e ver qual sera o menor numero e na segunda condição verificar qual numero da array numeros é amior que zero
 // ira ser impresso no primeiro console -10
 // no segundo console sera impresso 1590
+
+
 //---------- LOGICA DE PROGRAMAÇÃO ---------------
 
 // 1. for  for/of while
@@ -226,29 +228,41 @@
 
 // ------EXERCICIO 1a.
 
-let pessoasEIdades = [
-  { nome: "Pedro", idade: 20 },
-  { nome: "João", idade: 10 },
-  { nome: "Paula", idade: 12 },
-  { nome: "Artur", idade: 89 },
-];
+// let pessoasEIdades = [
+//   { nome: "Pedro", idade: 20 },
+//   { nome: "João", idade: 10 },
+//   { nome: "Paula", idade: 12 },
+//   { nome: "Artur", idade: 89 },
+// ];
 
-const idadeAdultos = pessoasEIdades.filter((pessoa) => {
-  if (pessoa.idade >= 20) {
-    return true;
-  }
-  return false;
-});
+// const idadeAdultos = pessoasEIdades.filter((pessoa) => {
+//   if (pessoa.idade >= 20) {
+//     return true;
+//   }
+//   return false;
+// });
 
-console.log(idadeAdultos);
+// console.log(idadeAdultos);
 
 // ---------EXERCICIO 1b.
 
-const idadeCriancas = pessoasEIdades.filter((pessoa) => {
-  if (pessoa.idade < 20) {
-    return true;
-  }
-  return false;
-});
+// const idadeCriancas = pessoasEIdades.filter((pessoa) => {
+//   if (pessoa.idade < 20) {
+//     return true;
+//   }
+//   return false;
+// });
 
-console.log(idadeCriancas);
+// console.log(idadeCriancas);
+
+// -------EXERCICIO 2a
+
+const array = [1, 2, 3, 4, 5, 6];
+
+const minhaArray = array.map((n) => {
+
+   return n*2
+
+    
+});
+console.log(minhaArray)
