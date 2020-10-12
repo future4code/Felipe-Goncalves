@@ -233,11 +233,22 @@ let pessoasEIdades = [
   { nome: "Artur", idade: 89 },
 ];
 
-const idadeAdultos = pessoasEIdades.filter((pessoa, index, array) => {
+const idadeAdultos = pessoasEIdades.filter((pessoa) => {
   if (pessoa.idade >= 20) {
     return true;
   }
   return false;
 });
 
-console.log(idadeAdultos)
+console.log(idadeAdultos);
+
+// ---------EXERCICIO 1b.
+
+const idadeCriancas = pessoasEIdades.filter((pessoa) => {
+  if (pessoa.idade < 20) {
+    return true;
+  }
+  return false;
+});
+
+console.log(idadeCriancas);
