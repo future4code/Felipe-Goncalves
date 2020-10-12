@@ -142,15 +142,24 @@
 
 const numerosArray = [22, 44, 55, 111, 474, 232, 9876]
 let primeiroMaior = numerosArray[0]
-let segundoMaiot = numerosArray[0]
+let segundoMaior = numerosArray[0]
 
 const comparaSegundo = (numerosArray) => {
-    for(let i = 0; i < numerosArray.length; i++){
+    for(let i = 0; i < primeiroMaior; i++){
 
-        if(primeiroMaior < numerosArray[i]){
-
+        if(i < primeiroMaior){
+            
             primeiroMaior = numerosArray[i]
+            
+        }else{
+            segundoMaior = numerosArray[i]
         }
-    }
+
+        
+    }  
+
+    return segundoMaior
     
 }
+console.log(comparaSegundo(numerosArray))
+
