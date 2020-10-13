@@ -130,7 +130,7 @@
 // let arrayPares = [];
 
 // let informaParidade = () => {
-//   for (let i = 0; minhaArray.length; i++) {
+//   for (let i = 0; i < minhaArray.length; i++) {
 //     if (minhaArray[i] % 2 === 0) {
 //       arrayPares.push(true);
 //     }else{}
