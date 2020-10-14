@@ -2,6 +2,12 @@ import React from "react";
 import "./App.css";
 import CardGrande from "./components/CardGrande/CardGrande";
 import ImagemButton from "./components/ImagemButton/ImagemButton";
+import CardPequeno from "./components/Cardpequeno/CardPequeno";
+import felipe from "./img/felipe.jpeg";
+import enxada from "./img/capinando.jpg";
+import amolando from "./img/amolando.webp";
+import iconeEmail from "./img/email.png";
+import iconeLocaliza from './img/mapas-e-localizacao.png'
 
 function App() {
   return (
@@ -9,7 +15,7 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png"
+          imagem={felipe}
           nome="Felipe Polato"
           descricao="Me chamo Felipe Polato Gonçalves, cursei Ciencias Biologicas pela UTFPR. Conheci o mundo programação aos 30 anos e dentro de 3 meses estudando por conta propria resolvi me profissionalizar na area, hoje cursando web fullstack pela escola Labenu."
         />
@@ -21,17 +27,27 @@ function App() {
       </div>
 
       <div className="page-section-container">
-        <h2>Experiências profissionais</h2>
+        <h2>Contato</h2>
+
+        <CardPequeno imagem={iconeEmail} email="E-mail:" texto="_labenu@.com" />
+
+        <CardPequeno 
+        imagem={iconeLocaliza}
+        endereco="Endereco:" textoEnd="_Caraguatatuba-São Paulo" />
+      </div>
+
+      <div className="page-section-container">
+        <h2>Experiências profissionalizantes</h2>
         <CardGrande
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png"
-          nome="Labenu"
-          descricao="Em formação!"
+          imagem={amolando}
+          nome="Amolando facão"
+          descricao="Experiencia de longa data com pedra deamolar e lima nova que na verdade esta velha!"
         />
 
         <CardGrande
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg"
-          nome="Universidade"
-          descricao="Cursado 50% do curso"
+          imagem={enxada}
+          nome="Carpindo lote da cidade"
+          descricao="Carpindo os loter em troca de marmita"
         />
       </div>
 
