@@ -1,6 +1,14 @@
 import React from "react";
 import "./App.css";
 import Post from "./components/Post/Post";
+import styled from "styled-components";
+
+const EstilizaPost = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
 
 class App extends React.Component {
   state = {
@@ -24,33 +32,40 @@ class App extends React.Component {
       },
     ],
 
-
     nomeUsuario: "",
     fotoUsuario: "",
-    fotoPost: ""
+    fotoPost: "",
   };
 
-   adicionaPost = () => {    
-    const novoPost = { 
-      nome: this.state.nomeUsuario,      
-      fotoDoUsuario: this.state.fotoUsuario,
-      fotoPostUsuario: this.state.fotoPost
+  adicionaPost = () => {
+    const novoPost = {
+      nomeUsuario: this.state.nomeUsuario,
+      fotoUsuario: this.state.fotoUsuario,
+      fotoPost: this.state.fotoPost,
     };
-  };
 
-    const  novoPosts = [...this.state.usuarios, novoPost];
+    const postagem = [...this.state.usuarios, novoPost];
 
     this.setState({
-    usuario: novoPost,
-    nomeUsuario: "",
-    fotoUsuario: "",
-    fotoPost: ""
-  });
-
+      usuarios: postagem,
+      nomeUsuario: "",
+      fotoUsuario: "",
+      fotoPost: "",
+    });
+  };
 
   onChangeNomeUsuario = (event) => {
     this.setState({ nomeUsuario: event.target.value });
   };
+
+  onChangeFotoUsuario = (event) => {
+    this.setState({ fotoUsuario: event.target.value });
+  };
+
+  onChangeFotoPost = (event) => {
+    this.setState({ fotoPost: event.target.value });
+  };
+
   render() {
     const listaDeUsuarios = this.state.usuarios.map((usuario) => {
       return (
@@ -62,38 +77,34 @@ class App extends React.Component {
       );
     });
 
-
-
     return (
       <div>
-
-        <div>
+        <EstilizaPost>
           <input
-            value={this.state.valor}
-            onChange={this.onChangeInputEmail}
-            placeholder={"Email"}
+            value={this.state.nomeUsuario}
+            onChange={this.onChangeNomeUsuario}
+            placeholder={"Usuario"}
           />
 
           <input
-            value={this.state.valorInputEmail}
-            onChange={this.onChangeInputEmail}
-            placeholder={"Email"}
+            value={this.state.fotoUsuario}
+            onChange={this.onChangeFotoUsuario}
+            placeholder={"Foto Perfil"}
           />
 
           <input
-            value={this.state.valorInputEmail}
-            onChange={this.onChangeInputEmail}
-            placeholder={"Email"}
+            value={this.state.fotoPost}
+            onChange={this.onChangeFotoPost}
+            placeholder={"Foto Post"}
           />
 
-          <button onClick={this.adicionaPessoa}>Adicionar</button>
-        </div>
+          <button onClick={this.adicionaPost}>Postar</button>
+        </EstilizaPost>
 
         <div>{listaDeUsuarios}</div>
       </div>
     );
-  };
+  }
 }
-
 
 export default App;

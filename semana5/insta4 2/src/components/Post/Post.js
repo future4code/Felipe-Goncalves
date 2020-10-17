@@ -1,5 +1,4 @@
 import React from "react";
-import "./Post.css";
 
 import { IconeComContador } from "../IconeComContador/IconeComContador";
 
@@ -9,6 +8,40 @@ import iconeComentario from "../../img/comment_icon.svg";
 import { SecaoComentario } from "../SecaoComentario/SecaoComentario";
 import iconeBookmarkPreto from "../../img/bookmarkBlack.svg";
 import iconeBookmarkBranco from "../../img/bookmarkBranco2.svg";
+import styled from "styled-components";
+
+const PostContainer = styled.div`
+  margin: auto;
+  border: 1px solid gray;
+  width: 300px;
+  margin-bottom: 10px;
+`;
+
+const PostHeader = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+`;
+
+const UserPhoto = styled.img`
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+`;
+
+const PostPhoto = styled.img`
+  width: 100%;
+`;
+
+const PostFooter = styled.div`
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-between;
+`;
 
 class Post extends React.Component {
   state = {
@@ -76,23 +109,15 @@ class Post extends React.Component {
     }
 
     return (
-      <div className={"post-container"}>
-        <div className={"post-header"}>
-          <img
-            className={"user-photo"}
-            src={this.props.fotoUsuario}
-            alt={"Imagem do usuario"}
-          />
+      <PostContainer>
+        <PostHeader>
+          <UserPhoto src={this.props.fotoUsuario} alt={"Imagem do usuario"} />
           <p>{this.props.nomeUsuario}</p>
-        </div>
+        </PostHeader>
 
-        <img
-          className={"post-photo"}
-          src={this.props.fotoPost}
-          alt={"Imagem do post"}
-        />
+        <PostPhoto src={this.props.fotoPost} alt={"Imagem do post"} />
 
-        <div className={"post-footer"}>
+        <PostFooter>
           <IconeComContador
             icone={iconeCurtida}
             onClickIcone={this.onClickCurtida}
@@ -109,9 +134,9 @@ class Post extends React.Component {
             icone={iconeBookmark}
             onClickIcone={this.onClickBookmark}
           />
-        </div>
+        </PostFooter>
         {componenteComentario}
-      </div>
+      </PostContainer>
     );
   }
 }
