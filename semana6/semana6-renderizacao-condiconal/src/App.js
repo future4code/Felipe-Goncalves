@@ -28,7 +28,7 @@ export class App extends React.Component {
 
   onClickIrProximaEtapa = () => {
     this.setState({
-      etapa: this.state.etapa + 1 ? this.state.etapa < 4 : false,
+      etapa: this.state.etapa + 1,
     });
   };
 
@@ -36,7 +36,9 @@ export class App extends React.Component {
     return (
       <div className="App">
         {this.renderizaEtapa()}
-        <button onClick={this.onClickIrProximaEtapa}>Próxima Etapa</button>
+        {this.state.etapa !== 4 && (
+          <button onClick={this.onClickIrProximaEtapa}>Próxima Etapa</button>
+        )}
       </div>
     );
   }
