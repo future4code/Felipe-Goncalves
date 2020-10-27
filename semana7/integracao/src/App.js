@@ -13,6 +13,11 @@ class App extends React.Component {
     this.pegaUsuario();
   };
 
+  componentDidUpdate = () => {
+    this.pegaUsuario();
+  };
+
+
   pegaUsuario = () => {
     axios
       .get(
@@ -48,6 +53,8 @@ class App extends React.Component {
         }
       )
       .then((response) => {
+        this.setState({ nameValue: "" }); 
+        this.setState({ emailValue: "" }); 
         alert("Cadastro com sucesso");
       })
       .catch((error) => {
@@ -55,13 +62,13 @@ class App extends React.Component {
       });
   };
 
-  onChangeNomeValue = (event) =>{
-    this.setState({nameValue: event.target.value})
-  }
+  onChangeNomeValue = (event) => {
+    this.setState({ nameValue: event.target.value });
+  };
 
-  onChangeEmailValue = (event) =>{
-    this.setState({emailValue: event.target.value})
-  }
+  onChangeEmailValue = (event) => {
+    this.setState({ emailValue: event.target.value });
+  };
 
   render() {
     return (
