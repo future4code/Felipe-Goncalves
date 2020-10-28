@@ -1,91 +1,24 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
-import axios from "axios";
+import Formulario from "./components/Formulario";
+import ListaDeUsuarios from "./components/ListaDeUsuarios";
 
 class App extends React.Component {
   state = {
-    nameValue: "",
-    emailValue: "",
+    Formulario: true,
   };
 
-  componentsDidMount = () => {
-    this.pegaUsuario();
-  };
-
-  componentDidUpdate = () => {
-    this.pegaUsuario();
-  };
-
-
-  pegaUsuario = () => {
-    axios
-      .get(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        {
-          headers: {
-            Authorization: "Felipe-Polato-Dumont",
-          },
-        }
-      )
-      .then((response) => {
-        this.setState({ usuario: response.data.result.list });
-      })
-      .catch((error) => {
-        console.log(error.data);
-      });
-  };
-
-  criaUsuario = () => {
-    const body = {
-      name: this.state.nameValue,
-      email: this.state.emailValue,
-    };
-
-    axios
-      .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        body,
-        {
-          headers: {
-            Authorization: "Felipe-Polato-Dumont",
-          },
-        }
-      )
-      .then((response) => {
-        this.setState({ nameValue: "" }); 
-        this.setState({ emailValue: "" }); 
-        alert("Cadastro com sucesso");
-      })
-      .catch((error) => {
-        console.log(error.data);
-      });
-  };
-
-  onChangeNomeValue = (event) => {
-    this.setState({ nameValue: event.target.value });
-  };
-
-  onChangeEmailValue = (event) => {
-    this.setState({ emailValue: event.target.value });
+  changePage = () => {
+    this.setState({ Formulario: !this.state.Formulario });
   };
 
   render() {
+    const currentPage = this.state.Formulario ? <Formulario /> : <ListaDeUsuarios />;
     return (
-      <div className="App">
-        <input
-          value={this.state.nameValue}
-          onChange={this.onChangeNomeValue}
-          placeholder="Digite nome do Usuario:"
-        />
-
-        <input
-          value={this.state.emailValue}
-          onChange={this.onChangeEmailValue}
-          placeholder="Digite nome do Usuario:"
-        />
-
-        <button onClick={this.criaUsuario}>Adicionar Usuario</button>
+      <div>
+        {currentPage}
+        <button onClick={this.changePage}>Mudar de Página</button>
       </div>
     );
   }
