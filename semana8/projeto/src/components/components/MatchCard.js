@@ -4,8 +4,11 @@ import axios from "axios";
 
 const Container = styled.div`
   margin-left: 400px;
+  margin-boton: 40px;
+  margin-top:40px;
   width: 30%;
   border: solid 1px red;
+  
 `;
 
 const ContainerCard = styled.div`
@@ -49,10 +52,7 @@ export default function MatchCard(props) {
       });
   };
 
-
-
   return (
-
     <Container>
       <div>
         <h2>ASTROMATCH</h2>
@@ -69,17 +69,13 @@ export default function MatchCard(props) {
             {profile.age}
           </h3>
 
-          <p >{profile.bio}</p>
-
+          <p>{profile.bio}</p>
         </ContainerCard>
       </div>
-        <div>
-      <button onClick={() => isMatch(false)}>X</button>
-      <button onClick={() => isMatch(true)}>♥️</button>
+      <div>
+        <button onClick={() => isMatch(false)}>X</button>
+        <button onClick={() => isMatch(true)}>♥️</button>
       </div>
-
-      
-      
     </Container>
   );
 }

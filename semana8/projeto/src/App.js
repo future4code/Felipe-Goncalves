@@ -7,17 +7,17 @@ export default function App() {
   const [enjoying, setEnjoying] = useState(false);
 
   const likes = () => {
-    setEnjoying(!enjoying);
+    setEnjoying(true);
   };
 
   return (
     <div className="App">
       {enjoying === true ? (
-        <GetMatch start={likes} />
+        <GetMatch start={likes} setEnjoying={setEnjoying} />
       ) : (
         <MatchCard enjoying={likes} />
       )}
-      {/* <GetMatch/> */}
+      
     </div>
   );
 }

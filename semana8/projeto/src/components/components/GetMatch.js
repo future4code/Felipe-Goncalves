@@ -4,7 +4,7 @@ import App from "../../App";
 
 export default function GetMatch(props) {
   const [likeList, setLikeList] = useState({});
-  const [home, setHome] = useState(false);
+  
 
   useEffect(() => {
     getMatch();
@@ -24,7 +24,7 @@ export default function GetMatch(props) {
   };
 
   const returnHome = () => {
-    setHome(!home);
+    props.setEnjoying(false)
   };
 
   const clearList = () => {
