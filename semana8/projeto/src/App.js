@@ -17,6 +17,7 @@ export default function App() {
       ) : (
         <MatchCard enjoying={likes} />
       )}
+      {/* <GetMatch/> */}
     </div>
   );
 }

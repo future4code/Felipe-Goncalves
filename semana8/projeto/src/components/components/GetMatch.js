@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
+import App from "../../App";
 
-export default function GetMatch() {
+export default function GetMatch(props) {
   const [likeList, setLikeList] = useState({});
+  const [home, setHome] = useState(false);
 
   useEffect(() => {
     getMatch();
@@ -21,10 +23,25 @@ export default function GetMatch() {
       });
   };
 
+  const returnHome = () => {
+    setHome(!home);
+  };
+
+  const clearList = () => {
+    axios
+      .put(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/felipe-polato/clear"
+      )
+      .then((response) => {
+        setLikeList(response.data.id);
+      });
+  };
+
   return (
-    <div> 
-      teste
-     </div>
-  )
-  
+    <div>
+      
+      <button onClick={clearList}>Limpa Lista</button>
+      <button onClick={returnHome}>Vira Vira</button>
+    </div>
+  );
 }

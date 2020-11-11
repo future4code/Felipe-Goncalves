@@ -49,13 +49,15 @@ export default function MatchCard(props) {
       });
   };
 
+
+
   return (
 
     <Container>
       <div>
         <h2>ASTROMATCH</h2>
 
-        <button onClick={props.start}>Troca Troca</button>
+        <button onClick={props.enjoying}>Troca Troca</button>
       </div>
 
       <div>
@@ -71,9 +73,13 @@ export default function MatchCard(props) {
 
         </ContainerCard>
       </div>
-
+        <div>
       <button onClick={() => isMatch(false)}>X</button>
       <button onClick={() => isMatch(true)}>♥️</button>
+      </div>
+
+      
+      
     </Container>
   );
 }
