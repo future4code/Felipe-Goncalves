@@ -3,20 +3,36 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Container = styled.div`
+  display: flex;
+  justify-content:center;
+  text-align: center;
   margin-left: 400px;
   margin-boton: 40px;
-  margin-top:40px;
-  width: 30%;
-  border: solid 1px red;
-  
+  width: 40%;
 `;
 
 const ContainerCard = styled.div`
-  width: 100%;
+  width: 90%;
 `;
 
 const Card = styled.img`
-  width: 80%;
+  margin: 20px;
+  width: 60%;
+  border-radius: 5px;
+`;
+
+const BotoesMatch = styled.button`
+  margin: 10px;
+  border: transparent;
+  background: #8b4500;
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+const BackgroundFundoMatch = styled.div`
+  width: 70%;
+  background: #ee7600;
+  border-radius: 15px;
 `;
 
 export default function MatchCard(props) {
@@ -54,28 +70,30 @@ export default function MatchCard(props) {
 
   return (
     <Container>
-      <div>
-        <h2>ASTROMATCH</h2>
+      <BackgroundFundoMatch>
+        <div>
+          <h2>ASTROMATCH</h2>
 
-        <button onClick={props.enjoying}>Troca Troca</button>
-      </div>
+          <BotoesMatch onClick={props.enjoying}>Troca Troca</BotoesMatch>
+        </div>
 
-      <div>
-        <ContainerCard>
-          <Card src={profile.photo} />
+        <div>
+          <ContainerCard>
+            <Card src={profile.photo} />
 
-          <h3>
-            {profile.name}
-            {profile.age}
-          </h3>
+            <h3>
+              {profile.name}
+              {profile.age}
+            </h3>
 
-          <p>{profile.bio}</p>
-        </ContainerCard>
-      </div>
-      <div>
-        <button onClick={() => isMatch(false)}>X</button>
-        <button onClick={() => isMatch(true)}>♥️</button>
-      </div>
+            <p>{profile.bio}</p>
+          </ContainerCard>
+        </div>
+        <div>
+          <BotoesMatch onClick={() => isMatch(false)}>X</BotoesMatch>
+          <BotoesMatch onClick={() => isMatch(true)}>♥️</BotoesMatch>
+        </div>
+      </BackgroundFundoMatch>
     </Container>
   );
 }

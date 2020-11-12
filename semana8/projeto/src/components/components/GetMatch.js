@@ -1,10 +1,42 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import App from "../../App";
+import styled from "styled-components";
+
+const ContainerMatch = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 400px;
+  margin-boton: 40px;
+  width: 40%;
+`;
+
+const BackgroundFundo = styled.div`
+  width: 70%;
+  background: #ee7600;
+  border-radius: 15px;
+`;
+
+const ContainerCardMatch = styled.div`
+  width: 90%;
+`;
+
+const CardMatch = styled.img`
+  margin: 20px;
+  width: 60%;
+  border-radius: 5px;
+`;
+
+const Botoes = styled.button`
+  margin: 10px;
+  padding: 10px;
+  border: transparent;
+  background: #8b4500;
+  border-radius: 5px;
+`;
 
 export default function GetMatch(props) {
-  const [likeList, setLikeList] = useState({});
-  
+  const [likeList, setLikeList] = useState([]);
 
   useEffect(() => {
     getMatch();
@@ -24,7 +56,7 @@ export default function GetMatch(props) {
   };
 
   const returnHome = () => {
-    props.setEnjoying(false)
+    props.setEnjoying(false);
   };
 
   const clearList = () => {
@@ -33,15 +65,30 @@ export default function GetMatch(props) {
         "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/felipe-polato/clear"
       )
       .then((response) => {
-        setLikeList(response.data.id);
+        getMatch();
+        console.log("Lista Apagada");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
   return (
-    <div>
-      
-      <button onClick={clearList}>Limpa Lista</button>
-      <button onClick={returnHome}>Vira Vira</button>
-    </div>
+    <ContainerMatch>
+      <BackgroundFundo>
+        <Botoes onClick={clearList}>Limpa Lista</Botoes>
+
+        {likeList.map((list) => {
+          return (
+            <ContainerCardMatch>
+              <CardMatch src={list.photo} />
+              <p>{list.name}</p>
+            </ContainerCardMatch>
+          );
+        })}
+
+        <Botoes onClick={returnHome}>Vira Vira</Botoes>
+      </BackgroundFundo>
+    </ContainerMatch>
   );
 }
