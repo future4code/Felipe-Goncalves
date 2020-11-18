@@ -11,7 +11,7 @@ function CreateTripPage() {
   const goToHome = () => {
     history.push("/");
   };
-
+console.log("Ola")
   return (
     <div>
       <p>goToCreateTripPage</p>

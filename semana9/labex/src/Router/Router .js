@@ -5,6 +5,7 @@ import LoginPage from "../components/LoginPage";
 import Home from "../components/Home";
 import ApplicationFormPage from "../components/ApplicationFormPage ";
 import CreateTripPage from "../components/CreateTripPage";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 function Router() {
   return (
@@ -19,12 +20,12 @@ function Router() {
         <Route exact path="/application-form">
           <ApplicationFormPage />
         </Route>
-        <Route exact path="/trips/create">
+        <ProtectedRoute exact path="/trips/create">
           <CreateTripPage />
-        </Route>
-        <Route exact path="/trips/list">
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/trips/list">
           <ListTripsPage />
-        </Route>
+        </ProtectedRoute>
       </Switch>
     </BrowserRouter>
   );
