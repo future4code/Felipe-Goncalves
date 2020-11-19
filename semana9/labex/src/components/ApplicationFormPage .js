@@ -1,12 +1,67 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function ApplicationFormPage() {
-  const history = useHistory();
+export const useForm = (initialValues) => {
+  const [form, setForm] = useState(initialValues);
 
-  const goToApplicationFormPage = () => {
-    history.push("/application-form");
+  const onChange = (value, name) => {
+    setForm({ ...form, [name]: value });
   };
+
+  return { form, onChange };
+};
+
+function ApplicationFormPage() {
+  const { form, onChange } = useForm({
+    nameCandidate: "",
+    age: "",
+    applicationText: "",
+    profession: "",
+    country: "",
+    trip: "",
+  });
+
+  const handleInputCandidate = (event) => {
+    const {
+      nameCandidate,
+      age,
+      applicationText,
+      profession,
+      country,
+      trip,
+    } = event.target;
+
+    onChange(nameCandidate, age, applicationText, profession, country, trip);
+  };
+
+  
+
+  const formCondidate = () => {
+    const body = {
+      nameCandidate: form.name,
+      age: form.age,
+      applicationText: form.applicationText,
+      profession: form.profession,
+      country: form.country,
+      
+    };
+
+    axios
+      .post(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/felipe-dumont/trips/HF3V6C2VFWoQ3QUOVJON/apply",
+        body
+      )
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
+        history.push("/trips/list");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const history = useHistory();
 
   const goToHome = () => {
     history.push("/");
@@ -15,8 +70,65 @@ function ApplicationFormPage() {
   return (
     <div>
       <p>ApplicationFormPage</p>
-      <button onClick={goToApplicationFormPage}>Formulario de Inscrição</button>
+
       <button onClick={goToHome}>Home</button>
+
+      <form onSubmit={formCondidate}>
+        <p>Candidato</p>
+        <input
+          value={form.nameCandidate}
+          placeholder={"Nome"}
+          onChange={handleInputCandidate}
+          name={"name"}
+          type={"text"}
+          pattern={"[A-Za-z]{3,}"}
+          min="3"
+          required
+        />
+        <input
+          value={form.age}
+          placeholder={"Idade"}
+          onChange={handleInputCandidate}
+          name={"age"}
+          type={"number"}
+          min="18"
+          required
+        />
+        <input
+          value={form.applicationText}
+          placeholder={""}
+          onChange={handleInputCandidate}
+          name={"applicationText"}
+          type={"text"}
+          min="30"
+          required
+        />
+        <input
+          value={form.profession}
+          placeholder={"Profissão"}
+          onChange={handleInputCandidate}
+          name={"profession"}
+          type={"text"}
+          required
+        />
+        <input
+          value={form.country}
+          placeholder={""}
+          onChange={handleInputCandidate}
+          name={"country"}
+          type={"text"}
+          required
+        />
+        <input
+          value={form.trip}
+          placeholder={"id trip"}
+          onChange={handleInputCandidate}
+          name={"trip"}
+          type={"text"}
+          required
+        />
+        <button>Enviar</button>
+      </form>
     </div>
   );
 }

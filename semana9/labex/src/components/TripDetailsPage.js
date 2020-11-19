@@ -15,7 +15,7 @@ function TripDetailsPage() {
   const getTripDetail = () => {
     axios
       .get(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/felipe-dumont/trip/${id}",
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/felipe-dumont/trip/${id'}",
         {
           headers: {
             auth: localStorage.getItem("token"),
@@ -38,11 +38,16 @@ function TripDetailsPage() {
     history.push("/");
   };
 
+  const goToPageAdm = () => {
+    history.push("/trip/page-adm");
+  };
+
   return (
     <div>
       <p>TripDetailsPage</p>
       <button onClick={goToTripDetailsPage}>Detalhes da Viagem</button>
       <button onClick={goToHome}>Home</button>
+      <button onClick={goToPageAdm}>Adm</button>
 
       <p>Trip Detail</p>
       <p>{trip.name}</p>

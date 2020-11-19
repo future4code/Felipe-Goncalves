@@ -6,6 +6,7 @@ import Home from "../components/Home";
 import ApplicationFormPage from "../components/ApplicationFormPage ";
 import CreateTripPage from "../components/CreateTripPage";
 import ProtectedRoute from "../components/ProtectedRoute";
+import PageAdm from "../components/PageAdm";
 
 function Router() {
   return (
@@ -25,6 +26,9 @@ function Router() {
         </ProtectedRoute>
         <ProtectedRoute exact path="/trips/list">
           <ListTripsPage />
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/trip/page-adm">
+          <PageAdm />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

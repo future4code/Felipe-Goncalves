@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -43,28 +43,12 @@ function LoginPage() {
       });
   };
 
-//   const goToHome = () => {
-//     history.push("/");
-//   };
-
-//   const goToListTripPage = () => {
-//     history.push("/trips/list");
-//   };
-
-//   const goToCreateTripPage = () => {
-//     history.push("/trips/create");
-//   };
-
   return (
     <div>
       <p>Login</p>
       <input value={email} onChange={handleEmail} />
       <input value={password} onChange={handlePassword} />
       <button onClick={login}>Fazer login</button>
-
-      {/* <button onClick={goToListTripPage}>Ver Todas as viagens</button>
-      <button onClick={goToCreateTripPage}>Criar uma viagem</button>
-      <button onClick={goToHome}>Home</button> */}
     </div>
   );
 }

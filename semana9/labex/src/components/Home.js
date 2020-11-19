@@ -12,11 +12,16 @@ function Home() {
     history.push("/application-form");
   };
 
+  const goToPageAdm = () => {
+    history.push("/trip/page-adm");
+  };
+
   return (
     <div>
       <p>Home</p>
       <button onClick={goToAppliFormPage}>Formulario de Inscrição</button>
       <button onClick={goToLoginPage}>Ir Para Login</button>
+      <button onClick={goToPageAdm}>Adm</button>
     </div>
   );
 }
