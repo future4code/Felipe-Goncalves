@@ -4,9 +4,11 @@ import ListTripsPage from "../components/ListTripsPage";
 import LoginPage from "../components/LoginPage";
 import Home from "../components/Home";
 import ApplicationFormPage from "../components/ApplicationFormPage ";
-import CreateTripPage from "../components/CreateTripPage";
+import CreateTripPage from "../components/PaginaEmBranco";
 import ProtectedRoute from "../components/ProtectedRoute";
-import PageAdm from "../components/PageAdm";
+import PageAdm from "../components/CreateTripPage";
+import ListPageCondidate from "../components/ListPageCandidate";
+import TripDetailsPage from "../components/TripDetailsPage";
 
 function Router() {
   return (
@@ -18,8 +20,11 @@ function Router() {
         <Route exact path="/login">
           <LoginPage />
         </Route>
-        <Route exact path="/application-form">
+        <Route exact path="/application-form/:id">
           <ApplicationFormPage />
+        </Route>
+        <Route exact path="/trip/listpagecandidate">
+          <ListPageCondidate />
         </Route>
         <ProtectedRoute exact path="/trips/create">
           <CreateTripPage />
@@ -29,6 +34,9 @@ function Router() {
         </ProtectedRoute>
         <ProtectedRoute exact path="/trip/page-adm">
           <PageAdm />
+        </ProtectedRoute>
+        <ProtectedRoute exact path="/trips/details/:id">
+          <TripDetailsPage />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

@@ -9,7 +9,7 @@ function Home() {
   };
 
   const goToAppliFormPage = () => {
-    history.push("/application-form");
+    history.push("/trip/listpagecandidate");
   };
 
   const goToPageAdm = () => {

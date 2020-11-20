@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 export const useForm = (initialValues) => {
   const [form, setForm] = useState(initialValues);
@@ -13,6 +13,9 @@ export const useForm = (initialValues) => {
 };
 
 function ApplicationFormPage() {
+  const pathParams = useParams();
+  const id = pathParams.id;
+  
   const { form, onChange } = useForm({
     nameCandidate: "",
     age: "",
@@ -35,8 +38,6 @@ function ApplicationFormPage() {
     onChange(nameCandidate, age, applicationText, profession, country, trip);
   };
 
-  
-
   const formCondidate = () => {
     const body = {
       nameCandidate: form.name,
@@ -44,12 +45,11 @@ function ApplicationFormPage() {
       applicationText: form.applicationText,
       profession: form.profession,
       country: form.country,
-      
     };
 
     axios
       .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/felipe-dumont/trips/HF3V6C2VFWoQ3QUOVJON/apply",
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/felipe-dumont/trips/${id}/apply`,
         body
       )
       .then((res) => {
