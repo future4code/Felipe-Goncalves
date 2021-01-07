@@ -1,0 +1,19 @@
+{
+  "name": "package-template",
+  "version": "1.0.0",
+  "description": "Primeira atividade backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && echo 'Iniciando aplicação...' && node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "soma":"clear && node ./soma.js"
+    
+  },
+
+  "keywords": [
+    "node",
+    "backend"
+  ],
+  "author": "Felipe Polato",
+  "license": "ISC"
+}
