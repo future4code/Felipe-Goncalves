@@ -14,7 +14,7 @@ export default async function createUser(
       const password = req.body.password
 
       if(password.length < 6){
-        throw new Error("Senha muito pequena, deve contar no miniimo 6 caracteres!!!");        
+        throw new Error("Senha muito pequena, deve contar no minimo 6 caracteres!!!");        
       };
 
       if (

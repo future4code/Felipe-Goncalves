@@ -1,5 +1,7 @@
 import * as jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
+dotenv.config();
 
 export function generateToken(
    payload: AuthenticationData

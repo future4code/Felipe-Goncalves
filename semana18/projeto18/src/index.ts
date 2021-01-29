@@ -4,6 +4,7 @@ import { AddressInfo } from "net";
 import dotenv from "dotenv";
 import knex from "knex";
 import createUser from "./edipont/createUser";
+import { login } from "./edipont/login";
 
 dotenv.config();
 
@@ -23,8 +24,8 @@ export const connection = knex({
 });
 
 //codigo
-app.post('/user/signup', createUser;
-app.post('/user/login');
+app.post('/user/signup', createUser);
+app.post('/user/login', login);
 app.post('/recipe');
 app.get('/user/profile');
 app.get('/user/:id');
