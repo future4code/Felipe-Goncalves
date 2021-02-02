@@ -1,5 +1,5 @@
 import * as jwt from "jsonwebtoken"
-import { USER_ROLES } from "../data/insertUser"
+import { USER_ROLES } from "../entities/user"
 
 export type AuthenticationData = {
    id: string,
@@ -13,7 +13,7 @@ export function generateToken(
       payload,
       process.env.JWT_KEY as string,
       {
-         expiresIn: "24min"
+         expiresIn: "1d"
       }
    )
 }
