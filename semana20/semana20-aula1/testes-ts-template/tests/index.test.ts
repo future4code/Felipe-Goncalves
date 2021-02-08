@@ -5,7 +5,8 @@ describe("Testing performPurchase", () => {
     test("Testing balance greater than value", () => {
         const user: User = {
             name: "Astrodev",
-            balance: 100
+            balance: 100,
+           
         }
     
         const result = performPurchase(user, 50)
@@ -47,7 +48,7 @@ describe("Testing performPurchase", () => {
 })
 
 
-describe("Testing performPurchase", () => {
+describe("Testing verifyAge", () => {
 
     test("1 brazilian allowed", () => {
         const brazilian: User = {

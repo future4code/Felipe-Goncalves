@@ -3,8 +3,6 @@ import {config} from 'dotenv'
 
 config()
 
-export const isEven = (integer: number) => { }
-
 export const connection = knex({
    client: "mysql",
    connection: {
