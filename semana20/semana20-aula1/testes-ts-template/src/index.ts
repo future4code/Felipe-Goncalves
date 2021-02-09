@@ -25,10 +25,18 @@ export enum LOCATION {
  }
  
  export interface User {
+   age: number;
+   nacionality: NACIONALITY;
+   name: string;
+   balance: number;  
+ }
+
+
+
+ export interface personUser {
    name: string;
    age: number;
    nacionality: NACIONALITY;
-   balance: number;  
  }
  
  export interface Casino {
